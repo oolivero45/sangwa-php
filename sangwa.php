@@ -4,18 +4,19 @@ function random() {
 }
 
 function sangwa_key($value) {
-  $a = str_split("~!1@2#3$4%5^6&7*8(9)0_-=+ qQwWeErRtTyYuUiIoOpP[{]}\\|aAsSdDfFgGhHjJkKlL;:\"'zZxXcCvVbBnNmM,<.>/?" . "~!1@2#3$4%5^6&7*8(9)0_-=+ qQwWeErRtTyYuUiIoOpP[{]}\\|aAsSdDfFgGhHjJkKlL;:\"'zZxXcCvVbBnNmM,<.>/?");
+  $sangwa_string = "~!1@2#3$4%5^6&7*8(9)0_-=+ qQwWeErRtTyYuUiIoOpP[{]}\\|aAsSdDfFgGhHjJkKlL;:\"'zZxXcCvVbBnNmM,<.>/?";
+  $a = str_split($sangwa_string . $sangwa_string);
   if (gettype($value) === "string") {
-    return strpos("~!1@2#3$4%5^6&7*8(9)0_-=+ qQwWeErRtTyYuUiIoOpP[{]}\\|aAsSdDfFgGhHjJkKlL;:\"'zZxXcCvVbBnNmM,<.>/?", $value);
+    return strpos($sangwa_string, $value);
   } else if (gettype($value) === "double" || gettype($value) === "integer") {
     if ($value >= 0) {
       $a[$value];
       return $a[$value];
     } else {
-      return $a[strlen("~!1@2#3$4%5^6&7*8(9)0_-=+ qQwWeErRtTyYuUiIoOpP[{]}\\|aAsSdDfFgGhHjJkKlL;:\"'zZxXcCvVbBnNmM,<.>/?") + $value];
+      return $a[strlen($sangwa_string) + $value];
     }
   } else {
-    return str_split("~!1@2#3$4%5^6&7*8(9)0_-=+ qQwWeErRtTyYuUiIoOpP[{]}\\|aAsSdDfFgGhHjJkKlL;:\"'zZxXcCvVbBnNmM,<.>/?" . "~!1@2#3$4%5^6&7*8(9)0_-=+ qQwWeErRtTyYuUiIoOpP[{]}\\|aAsSdDfFgGhHjJkKlL;:\"'zZxXcCvVbBnNmM,<.>/?");
+    return str_split($sangwa_string . $sangwa_string);
   }
 }
 
