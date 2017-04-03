@@ -1,3 +1,4 @@
+<?php
 function random() {
   return (float)rand()/(float)getrandmax();
 }
@@ -36,3 +37,4 @@ function sangwa_decode($value) {
   }
   return $result;
 }
+?>
